@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/vsts/pipelines/languages/go
 
 pool:
-  vmImage: 'win1803'
+  vmImage: 'VS2017-Win2016'
 
 variables:
     GOBIN:  '%GOPATH%\bin' # Go binaries path
