@@ -14,6 +14,9 @@ install:
   - set Path=c:\go\bin;c:\gopath\bin;
   - go version
   - go env
+  - set
+  - wmic os get version
+
 
 build: false
 deploy: false
