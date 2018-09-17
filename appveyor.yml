@@ -1,5 +1,8 @@
 version: "{build}"
 
+image:
+- Visual Studio 2017
+
 clone_folder: c:\gopath\src\github.com\Azure\acr-builder
 
 environment:
@@ -9,6 +12,7 @@ install:
   - set Path=c:\go\bin;c:\gopath\bin;
   - go version
   - go env
+  - 
 
 build: false
 deploy: false
