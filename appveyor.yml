@@ -5,6 +5,8 @@ image:
 
 clone_folder: c:\gopath\src\github.com\Azure\acr-builder
 
+stack: go 1.10
+
 environment:
   GOPATH: c:\gopath
 
@@ -12,7 +14,6 @@ install:
   - set Path=c:\go\bin;c:\gopath\bin;
   - go version
   - go env
-  - 
 
 build: false
 deploy: false
