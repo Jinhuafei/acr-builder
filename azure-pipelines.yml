@@ -12,19 +12,19 @@ variables:
     GOPATH: '%system.defaultWorkingDirectory%\gopath' # Go workspace path
     modulePath: '%GOPATH%\src\github.com\%build.repository.name%' # Path to the module's code
 
-  steps:
-  - script: |
-      mkdir %GOBIN%
-      mkdir %GOPATH%\pkg
-      mkdir %modulePath%
-      echo '##vso[task.prependpath]%GOBIN%'
-      echo '##vso[task.prependpath]%GOROOT%\bin'
-    displayName: 'Set up the Go workspace'
-  
-  - script: |
-      go version
-      go get -v -t -d ./...
-      go build -v .
-      go test ./...
-    workingDirectory: '$(modulePath)'
-    displayName: 'Get dependencies, then build and test'
+steps:
+- script: |
+    mkdir %GOBIN%
+    mkdir %GOPATH%\pkg
+    mkdir %modulePath%
+    echo '##vso[task.prependpath]%GOBIN%'
+    echo '##vso[task.prependpath]%GOROOT%\bin'
+  displayName: 'Set up the Go workspace'
+
+- script: |
+    go version
+    go get -v -t -d ./...
+    go build -v .
+    go test ./...
+  workingDirectory: '$(modulePath)'
+  displayName: 'Get dependencies, then build and test'
