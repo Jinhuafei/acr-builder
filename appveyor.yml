@@ -6,7 +6,7 @@ image:
 clone_folder: c:\gopath\src\github.com\Azure\acr-builder
 
 init:
-  - git config --global core.autocrlf
+  - git config --global core.autocrlf true
 
 environment:
   GOPATH: c:\gopath
