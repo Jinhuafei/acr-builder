@@ -15,7 +15,7 @@ install:
   - go version
   - go env
   - set
-  - wmic os get version
+  - ver
 
 
 build: false
