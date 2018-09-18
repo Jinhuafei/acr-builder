@@ -14,8 +14,7 @@ install:
   - set Path=c:\go\bin;c:\gopath\bin;
   - go version
   - go env
-  - set
-  - ver
+  - git config --global core.autocrlf
 
 
 build: false
